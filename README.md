@@ -65,7 +65,7 @@ Train: 233 days | Test: 59 days | Baseline (random): 33.3%
 | 🥇 Random Forest (n=6, seed=13) | **78.0%** |
 | Decision Tree (depth=3) | 76.3% |
 | Neural Network (seed=42) | 67.8% |
-| KNN (k=3) | 61.0% |
+| KNN (k=3) | 66.1% |
 | Baseline (random) | 33.3% |
 
 ### Regression (predict daily expense amount)
@@ -90,7 +90,7 @@ Train: 233 days | Test: 59 days | Baseline (random): 33.3%
 
 **Random Forest:** 6 trees, bagging + random feature subsets, majority vote
 
-**KNN:** k=3, Euclidean distance
+**KNN:** k=3, Manhattan distance
 
 ---
 
