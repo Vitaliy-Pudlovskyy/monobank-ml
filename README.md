@@ -18,8 +18,8 @@ A machine learning project built on my personal Monobank transaction history for
 
 ```
 monobank-ml/
-├── data/
-│   └── monobank_clean.csv        # anonymized transaction history
+├── data_set/
+│   └── monobank_clean (1).csv        # anonymized transaction history
 ├── regression.py                 # linear regression + neural network
 ├── classification.py             # neural network classification + interactive mode
 ├── decision_tree.py              # decision tree classification
