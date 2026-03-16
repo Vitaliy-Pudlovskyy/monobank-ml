@@ -77,16 +77,13 @@ X_test  = (X_test  - X_min) / (X_max - X_min)
 print(f"Train: {len(X_train)} днів | Test: {len(X_test)} днів")
 
 
-def euclidean_distance(a, b):
-    total = 0
-    for i in range(len(a)):
-        total += (a[i] - b[i]) ** 2
-    return math.sqrt(total)
+def manhattan(a, b):
+    return sum(abs(a[i] - b[i]) for i in range(len(a)))
 
 def knn_predict(X_train, y_train, x_new, k=5):
     distances = []
     for i in range(len(X_train)):
-        dist = euclidean_distance(X_train[i],x_new )
+        dist = manhattan(X_train[i],x_new )
         distances.append((dist, y_train[i]))
 
     distances.sort(key=lambda x: x[0])
