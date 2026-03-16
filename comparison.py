@@ -249,11 +249,11 @@ print(f"{dt_acc*100:.1f}% ✓")
 # 6. KNN — КЛАСИФІКАЦІЯ
 # ============================================================
 print("Навчання: KNN...", end=' ')
-def euclidean(a, b):
-    return math.sqrt(sum((a[i]-b[i])**2 for i in range(len(a))))
+def manhattan(a, b):
+    return sum(abs(a[i] - b[i]) for i in range(len(a)))
 
 def knn_predict(x_new, k=3):
-    dists = sorted([(euclidean(X_train_n[i], x_new), y_train[i]) for i in range(len(X_train_n))])
+    dists = sorted([(manhattan(X_train_n[i], x_new), y_train[i]) for i in range(len(X_train_n))])
     votes = [d[1] for d in dists[:k]]
     return max(set(votes), key=votes.count)
 
