@@ -135,7 +135,7 @@ Enter data (or 'exit' to quit):
 - Train/test split
 - Decision Tree (Gini impurity, recursive splitting)
 - Random Forest (bagging, random subsets, majority vote)
-- KNN (Euclidean distance, k-neighbors voting)
+- KNN (Manhattan distance, k-neighbors voting)
 
 ---
 
